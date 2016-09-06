@@ -14,16 +14,22 @@ namespace LooseCoupling
         {
             try
             {
-                //Console.WriteLine("*** Data from the Web ***");
-                //ToDos(new ToDoService());
-                Console.WriteLine("*** Local Data ***");
-                ToDos(new TestToDoService());
-                Console.ReadLine();
+                if(_testMode)
+                {
+                    Console.WriteLine("Test Data:");
+                    ToDos(new TestToDoService());
+                }
+                else
+                {
+                    Console.WriteLine("Real Data:");
+                    ToDos(new ToDoService());
+                }
             }
             catch(Exception e)
             {
                 Console.WriteLine("An exception was thrown: " + e.Message);
             }
+            Console.ReadLine();
         }
 
 
@@ -37,5 +43,7 @@ namespace LooseCoupling
             }
         }
 
+
+        private static bool _testMode = false;
     }
 }

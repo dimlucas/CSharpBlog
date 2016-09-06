@@ -17,7 +17,7 @@ namespace LooseCoupling.Services
                 new ToDo() { Id = 2, Title = "Cleen your room", Completed = true },
                 new ToDo() { Id = 3, Title = "Write a blog post", Completed = false }
             };
-            return new Task<IEnumerable<ToDo>>(() => todos);
+            return Task.FromResult<IEnumerable<ToDo>>(todos);
         }
     }
 }
