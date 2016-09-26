@@ -13,6 +13,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using ObservableObjectDemo.Views;
+using Windows.UI.Core;
+
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -26,6 +28,7 @@ namespace ObservableObjectDemo
         public MainPage()
         {
             this.InitializeComponent();
+            SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
         }
 
         private void NonObservableBtn_Click(System.Object sender, RoutedEventArgs e)

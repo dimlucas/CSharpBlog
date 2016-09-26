@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using ObservableObjectDemo.ViewModels;
+using Windows.UI.Core;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -27,6 +28,15 @@ namespace ObservableObjectDemo.Views
         {
             this.InitializeComponent();
             ViewModel = new NonObservableWorldViewModel();
+            SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+            SystemNavigationManager.GetForCurrentView().BackRequested += (sender, args) =>
+            {
+                if (Frame.CanGoBack)
+                {
+                    Frame.GoBack();
+                    args.Handled = true;
+                }
+            };
         }
 
         public NonObservableWorldViewModel ViewModel { get; private set; }
