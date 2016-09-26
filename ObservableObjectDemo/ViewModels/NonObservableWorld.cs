@@ -8,5 +8,6 @@ namespace ObservableObjectDemo.ViewModels
 {
     public class NonObservableWorld
     {
+
     }
 }

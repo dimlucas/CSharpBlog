@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using ObservableObjectDemo.Views;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -25,6 +26,16 @@ namespace ObservableObjectDemo
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private void NonObservableBtn_Click(System.Object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(NonObservableWorldPage));
+        }
+
+        private void ObservableBtn_Click(System.Object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ObservableWorldPage));
         }
     }
 }

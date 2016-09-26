@@ -27,8 +27,8 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Button Style="{StaticResource PageBtn}" Content="No Observable Objects World :("/>
-            <Button Style="{StaticResource PageBtn}" Grid.Row="1" Content="World With Observable Objects :)"/>
+            <Button Name="NonObservableBtn"  Style="{StaticResource PageBtn}" Content="No Observable Objects World :(" Click="NonObservableBtn_Click" />
+            <Button Name="ObservableBtn"  Style="{StaticResource PageBtn}" Grid.Row="1" Content="World With Observable Objects :)" Click="ObservableBtn_Click"/>
         </Grid>
     </Grid>
 </Page>
