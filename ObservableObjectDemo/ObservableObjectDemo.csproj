@@ -98,9 +98,11 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\NonObservablePokemon.cs" />
     <Compile Include="Models\ObservableObject.cs" />
+    <Compile Include="Models\ObservablePokemon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\NonObservableWorld.cs" />
+    <Compile Include="ViewModels\NonObservableWorldViewModel.cs" />
     <Compile Include="ViewModels\ObservableWorldViewModel.cs" />
     <Compile Include="Views\NonObservableWorldPage.xaml.cs">
       <DependentUpon>NonObservableWorldPage.xaml</DependentUpon>
